@@ -7,8 +7,8 @@ public class CtoFConverter {
         String Bad = "";
         Double F = 0.0;
         Boolean Valid = false;
-        System.out.println("Please enter the temperature in Celsius  ");
         do {
+            System.out.println("Please enter the temperature in Celsius  ");
             if (in.hasNextDouble()) {
                 Cel = in.nextDouble();
                 in.nextLine();
@@ -16,10 +16,14 @@ public class CtoFConverter {
             }
             else {
                 Bad = in.nextLine();
-                System.out.println("Please enter a valid temperature in Celsius");
                 System.out.println("You have entered " + Bad);
+                System.out.println("Please enter a valid temperature in Celsius");
+
+
             }
         }while(!Valid);
+        //instructions aren't super clear on how to handle the boiling and freezing points
+        // I assume this is what you want done
         if(Cel == 100.0){
             System.out.println("You have entered 100 Celsius, Which is equal to 212 degrees Fahrenheit");
         }
@@ -28,7 +32,7 @@ public class CtoFConverter {
         }
         else{
             F = (Cel * 9 / 5) + 32;
-            System.out.println(Cel + " degrees celsius is equal to " + F + "degrees Fahrenheit");
+            System.out.println(Cel + " degrees celsius is equal to " + F + " degrees Fahrenheit");
         }
 
     }
